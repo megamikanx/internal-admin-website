@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #EEEEF0;
+    --panel: #FFFFFF;
+    --panel-muted: rgba(255, 255, 255, 0.6);
+    --surface: #F7F7FA;
+    --surface-muted: rgba(247, 247, 250, 0.6);
+    --overlay: rgba(80, 84, 98, 0.35);
+    --text: #000000;
+    --subtext: #393B46;
+    --muted: #505462;
+    --muted-60: rgba(80, 84, 98, 0.6);
+    --muted-50: rgba(80, 84, 98, 0.5);
+    --placeholder: #6A6D79;
+    --accent: #9804F9;
+    --accent-10: rgba(152, 4, 249, 0.1);
+    --accent-20: rgba(218, 177, 253, 0.8);
+  }
+
+  [data-theme="dark"] {
+    --bg: #0F1117;
+    --panel: #111827;
+    --panel-muted: rgba(17, 24, 39, 0.7);
+    --surface: #1F2937;
+    --surface-muted: rgba(31, 41, 55, 0.7);
+    --overlay: rgba(15, 17, 23, 0.7);
+    --text: #F8FAFC;
+    --subtext: #CBD5E1;
+    --muted: #475569;
+    --muted-60: rgba(71, 85, 105, 0.6);
+    --muted-50: rgba(71, 85, 105, 0.5);
+    --placeholder: #94A3B8;
+    --accent: #9804F9;
+    --accent-10: rgba(152, 4, 249, 0.2);
+    --accent-20: rgba(152, 4, 249, 0.3);
+  }
+
+  [data-theme="pink"] {
+    --bg: #FEECFB;
+    --panel: #FFF7FD;
+    --panel-muted: rgba(255, 247, 253, 0.7);
+    --surface: #FFEAF8;
+    --surface-muted: rgba(255, 234, 248, 0.7);
+    --overlay: rgba(254, 236, 251, 0.8);
+    --text: #22232A;
+    --subtext: #676C7E;
+    --muted: #F741C1;
+    --muted-60: rgba(247, 65, 193, 0.6);
+    --muted-50: rgba(247, 65, 193, 0.5);
+    --placeholder: #676C7E;
+    --accent: #F741C1;
+    --accent-10: rgba(247, 65, 193, 0.12);
+    --accent-20: #FFB8F3;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+}
+
+@layer utilities {
+  .bg-slate-950 {
+    background-color: var(--panel) !important;
+  }
+
+  .bg-slate-900 {
+    background-color: var(--surface) !important;
+  }
+
+  .bg-slate-900\/60 {
+    background-color: var(--surface-muted) !important;
+  }
+
+  .bg-slate-950\/60 {
+    background-color: var(--panel-muted) !important;
+  }
+
+  .bg-slate-950\/80 {
+    background-color: var(--overlay) !important;
+  }
+
+  .text-slate-100,
+  .text-slate-200 {
+    color: var(--text) !important;
+  }
+
+  .text-slate-300,
+  .text-slate-400,
+  .text-slate-500,
+  .text-slate-600 {
+    color: var(--subtext) !important;
+  }
+
+  .border-slate-700,
+  .border-slate-800 {
+    border-color: var(--muted) !important;
+  }
+
+  .border-slate-700\/60 {
+    border-color: var(--muted-60) !important;
+  }
+
+  .border-slate-800\/50 {
+    border-color: var(--muted-50) !important;
+  }
+
+  .placeholder\:text-slate-600::placeholder {
+    color: var(--placeholder) !important;
+  }
+
+  .bg-indigo-500 {
+    background-color: var(--accent) !important;
+  }
+
+  .bg-indigo-500\/10 {
+    background-color: var(--accent-10) !important;
+  }
+
+  .bg-indigo-500\/20 {
+    background-color: var(--accent-20) !important;
+  }
+
+  .hover\:bg-indigo-400:hover {
+    background-color: #B968FF !important;
+  }
+
+  .text-indigo-100,
+  .text-indigo-200,
+  .text-indigo-400 {
+    color: var(--accent) !important;
+  }
+
+  .border-indigo-400 {
+    border-color: var(--accent) !important;
+  }
+
+  .hover\:border-indigo-400:hover {
+    border-color: var(--accent) !important;
+  }
+
+  .text-emerald-300 {
+    color: #1CA23D !important;
+  }
+
+  .text-amber-300 {
+    color: #FF9812 !important;
+  }
+
+  .text-rose-300 {
+    color: #FF4242 !important;
+  }
+
+  .focus\:ring-indigo-400\/30:focus {
+    --tw-ring-color: rgba(185, 104, 255, 0.3) !important;
+  }
+
+  .text-black {
+    color: var(--text) !important;
+  }
+
+  .text-\[\#393B46\] {
+    color: var(--subtext) !important;
+  }
+
+  .text-\[\#505462\] {
+    color: var(--muted) !important;
+  }
+
+  .border-\[\#505462\] {
+    border-color: var(--muted) !important;
+  }
+
+  .bg-\[\#EEEEF0\] {
+    background-color: var(--bg) !important;
+  }
+}
+
+[data-theme="pink"] .bg-\[\#9804F9\] {
+  background-color: #F741C1 !important;
+}
+
+[data-theme="pink"] .bg-\[\#B968FF\] {
+  background-color: #F741C1 !important;
+}
+
+[data-theme="pink"] .bg-\[\#DAB1FD\],
+[data-theme="pink"] .bg-\[\#B968ff\] {
+  background-color: #FFB8F3 !important;
+}
+
+[data-theme="pink"] .bg-\[\#FF6363\],
+[data-theme="pink"] .bg-\[\#FF4242\] {
+  background-color: #F741C1 !important;
+}
+
+[data-theme="pink"] .hover\:bg-\[\#FF4242\]:hover,
+[data-theme="pink"] .hover\:bg-\[\#B968FF\]:hover {
+  background-color: #F741C1 !important;
+}
+
+[data-theme="pink"] .text-\[\#FF4242\],
+[data-theme="pink"] .hover\:text-\[\#E53A3A\]:hover {
+  color: #F741C1 !important;
+}
+
+[data-theme="pink"] .border-\[\#FF4242\],
+[data-theme="pink"] .hover\:border-\[\#E53A3A\]:hover {
+  border-color: #F741C1 !important;
+}
+
+[data-theme="pink"] .text-\[\#9804F9\],
+[data-theme="pink"] .hover\:text-\[\#9804F9\]:hover {
+  color: #F741C1 !important;
+}
+
+[data-theme="pink"] .hover\:bg-slate-800:hover {
+  background-color: #FFB8F3 !important;
+}
+
+[data-theme="pink"] .border-\[\#9804F9\],
+[data-theme="pink"] .hover\:border-\[\#9804F9\]:hover {
+  border-color: #F741C1 !important;
+}
+
+[data-theme="pink"] .text-emerald-300 {
+  color: #F741C1 !important;
+}
+
+[data-theme="pink"] .text-amber-300 {
+  color: #c257a2 !important;
+}
+
+[data-theme="pink"] .text-rose-300 {
+  color: #F741C1 !important;
+}
+
+[data-theme="pink"] .border-emerald-500\/40 {
+  border-color: #F741C1 !important;
+}
+
+[data-theme="pink"] .bg-emerald-500\/10 {
+  background-color: rgba(247, 65, 193, 0.12) !important;
+}
+
+[data-theme="pink"] .text-emerald-200 {
+  color: #F741C1 !important;
+}
+
+[data-theme="pink"] .border-\[\#36CB5B\],
+[data-theme="pink"] .hover\:border-\[\#2FB350\]:hover {
+  border-color: #F741C1 !important;
+}
+
+[data-theme="pink"] .text-\[\#36CB5B\],
+[data-theme="pink"] .hover\:text-\[\#2FB350\]:hover {
+  color: #F741C1 !important;
+}
+
+[data-theme="dark"] .react-datepicker {
+  background-color: var(--panel);
+  border-color: var(--muted);
+  color: var(--text);
+}
+
+[data-theme="dark"] .react-datepicker__header {
+  background-color: var(--surface);
+  border-bottom-color: var(--muted);
+}
+
+[data-theme="dark"] .react-datepicker__current-month,
+[data-theme="dark"] .react-datepicker__day-name,
+[data-theme="dark"] .react-datepicker__day,
+[data-theme="dark"] .react-datepicker__time-name {
+  color: var(--text);
+}
+
+[data-theme="dark"] .react-datepicker__day--outside-month {
+  color: var(--muted);
+}
+
+[data-theme="dark"] .react-datepicker__day--selected,
+[data-theme="dark"] .react-datepicker__day--keyboard-selected {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+[data-theme="dark"] .react-datepicker__day:hover {
+  background-color: var(--accent-10);
+}
+
+[data-theme="dark"] .react-datepicker__triangle::before,
+[data-theme="dark"] .react-datepicker__triangle::after {
+  border-bottom-color: var(--surface);
+}
