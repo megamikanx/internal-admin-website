@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+SQLAlchemy
+psycopg2-binary
+pydantic
+bcrypt
+python-dotenv
+pwdlib
+alembic
+itsdangerous
+pwdlib[argon2]
+pydantic[email]
+pytest
+google-auth
+google-auth-oauthlib
+google-api-python-client
+mangum
