@@ -10,7 +10,7 @@ from app.core.security import password_hash
 from app.core.enums import Teams
 
 ADMIN = {
-    "email": "admin@teamremited.com",
+    "email": "admin@example.com",
     "name": "Admin",
     "nickname": "Admin",
     "password": "Admin123!!",
