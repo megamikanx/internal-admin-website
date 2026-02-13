@@ -1,4 +1,4 @@
-# Remited Admin
+# Internal Admin
 
 Internal admin web application for managing meeting schedules, Google Calendar sync, drink orders, and account/room administration.
 
